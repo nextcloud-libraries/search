@@ -1,0 +1,52 @@
+{
+  "name": "@nextcloud/search",
+  "version": "0.1.0",
+  "description": "Unified search helpers for Nextcloud apps and libraries",
+  "keywords": [
+    "nextcloud",
+    "search",
+    "unified-search"
+  ],
+  "homepage": "https://github.com/nextcloud-libraries/nextcloud-search#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextcloud-libraries/nextcloud-search.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "Nextcloud GmbH and Nextcloud contributors",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite --mode production build",
+    "dev": "vite --mode development build",
+    "dev:watch": "vite --mode development build --watch",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint lib",
+    "lint:fix": "eslint --fix lib"
+  },
+  "devDependencies": {
+    "@nextcloud/eslint-config": "^8.4.2",
+    "@nextcloud/vite-config": "^2.3.5",
+    "@vitest/coverage-v8": "^3.2.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": "^20.0.0 || ^22.0.0"
+  }
+}
